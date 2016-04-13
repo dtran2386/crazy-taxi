@@ -27,11 +27,17 @@ module.exports = Backbone.Model.extend({
     },
     validate: function(attributes) {
         console.log(attributes);
-        if (attributes.y > 10) {
+        if (attributes.y >= 10 | attributes.y <= 0) {
+            y = 10;
             return 'you\'re going too far! turn back!';
+        } else if (attributes.y <= 0) {
+            y = 0;
         }
-        if (attributes.x > 10) {
+        if (attributes.x >= 10) {
+            x = 10;
             return 'you\'re going too far! turn back!';
+        } else if (attributes.x <= 0) {
+            x = 0;
         }
     },
     up: function() {
