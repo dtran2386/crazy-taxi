@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="http://backbonejs.org/backbone-min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script type="text/template" id="new-player-template">
+        <form id="new-player-form">
+            <input type="text" id="player-name" placeholder="Enter your name.." autocomplete="off">
+            <button id="create-player">Play</button>
+        </form>
+    </script>
+    <script type="text/template" id="play-game-template">
+        <div>
+            <button id="click-up">move up</button>
+            <button id="click-down">move down</button>
+            <button id="click-left">move left</button>
+            <button id="click-right">move right</button>
+            <p>
+                <%= name %> is in position
+            </p>
+        </div>
+    </script>
+</head>
+
+<body>
+    <h1>Kinesiology Man 4</h1>
+    <h2><a href="#/new">New Player</a></h2>
+    <h2><a href="#/play">Play</a></h2>
+    <main id="content">
+        <div id="new-player-section"></div>
+        <div id="play-game-section"></div>
+    </main>
+</body>
+
+</html>
