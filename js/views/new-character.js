@@ -9,9 +9,24 @@ module.exports = Backbone.View.extend({
     },
     newCharacter: function () {
         console.log('adding a new player in the model');
-        this.model.storeInGame({
-            name: document.getElementById('player-name').value,
-        });
+        this.model.storeInGame(document.getElementById('player-name').value);
+        var corolla = document.getElementById('vehicle-1');
+        var cruiser = document.getElementById('vehicle-2');
+        if (corolla.checked) {
+            this.model.storeVehicle('Toyota Corolla');
+            this.model.set('energyConsump', 1);
+//            if (this.model.get('energy') < 4) {
+//                alert('Your energy levels are too low! You lose the game.');
+//            } // won't work here, i don't think
+        }
+        if (cruiser.checked) {
+            this.model.storeVehicle('Toyota Land Cruiser');
+            this.model.set('energyConsump', 3);
+        }
+        
+//        this.model.storeInGame2({
+//            vehicle: document.getElementById('vehicle-2').value,
+//        });
 //        var name = document.getElementById('player-name').value;
 //        console.log('new name: ' + name);
 //        this.model.set('name', name);

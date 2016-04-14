@@ -13,30 +13,48 @@
     <script type="text/template" id="new-player-template">
         <form id="new-player-form">
             <input type="text" id="player-name" placeholder="Enter your name.." autocomplete="off">
+            <div>
+            <label for="vehicle-1">Toyota Corolla</label>
+            <input type="radio" name="car" id="vehicle-1">
+            <label for="vehicle-2">Toyota Land Cruiser</label>
+            <input type="radio" name="car" id="vehicle-2">
             <button id="create-player">Play</button>
+            </div>
         </form>
     </script>
     <script type="text/template" id="play-game-template">
         <div>
+            <h2>Game currently in progress</h2>
             <button id="click-up">move up</button>
             <button id="click-down">move down</button>
-            <button id="click-left">move left</button>
             <button id="click-right">move right</button>
+            <button id="click-left">move left</button>
             <p>
-                <%= name %> is in position
+                <%= name %> is at position (<%= x %>,<%= y %>) and driving a <%= vehicle %>
+            </p>
+            <p>
+                Energy level is currently at <%= energy %>/102
+            </p>
+            <p>
+                Total number of energy pods collected: <%= podsCollected %>
+            </p>
+            <p> Energy pod is now located at position (<%= xEnergy %>,<%= yEnergy %>).
             </p>
         </div>
     </script>
 </head>
 
 <body>
-    <h1>Kinesiology Man 4</h1>
-    <h2><a href="#/new">New Player</a></h2>
-    <h2><a href="#/play">Play</a></h2>
-    <main id="content">
-        <div id="new-player-section"></div>
-        <div id="play-game-section"></div>
-    </main>
+    <div class="border">
+        <h1>Kinesiology Man 4</h1>
+        <h2><a href="#/new">New Player</a></h2>
+        <h2><a href="#/play">Play</a></h2>
+        <main id="content">
+            <div id="new-player-section"></div>
+            <div id="play-game-section"></div>
+        </main>
+
+    </div>
 </body>
 
 </html>

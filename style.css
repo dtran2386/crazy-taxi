@@ -1,3 +1,12 @@
+body {
+    margin: 10%;
+}
+.border {
+    border: 3px solid black;
+    padding-left: 33.5%;
+    border-radius: 5px;
+    height: 670px;
+}
 h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 45px;
@@ -23,7 +32,7 @@ button:hover {
 }
 input {
     height: 40px;
-    width: 200px;
+    width: 290px;
     border: 1px solid black;
     border-radius: 4px;
     text-align: center;
@@ -37,8 +46,12 @@ a:hover {
     color: darkred;
 }
 p {
-    margin-left: 11.5%;
     color: darkolivegreen;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 20px;
+}
+input[type="radio"] {
+    width: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 25px;
 }
