@@ -5,11 +5,13 @@ module.exports = Backbone.Model.extend({
         x: 0,
         y: 0,
         vehicle: 'Toyota Avalon',
-        energy: 102,
+        energy: 60,
         energyConsump: 1,
         xEnergy: 1,
         yEnergy: 1,
         podsCollected: 0,
+        minEnergy: 2,
+        totalScore: 0,
     },
     storeInGame: function(name) {
 //        var playaz = this.get('numPlayers'); // array specific
