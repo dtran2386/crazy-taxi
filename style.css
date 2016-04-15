@@ -38,7 +38,7 @@ button:hover {
     color: white;
 }
 #create-player {
-    width: 200px;
+    width: 250px;
     height: 70px;
 }
 input {
@@ -87,6 +87,9 @@ input[type="radio"] {
 }
 .cells {
     background-color: palegreen;
+}
+.cells:hover {
+    background-color: aliceblue;
 }
 .energy-pod {
     background-color: green;
