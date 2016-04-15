@@ -1,6 +1,8 @@
 // New character view: shows a form to create a new character
 module.exports = Backbone.View.extend({
-
+    events: {
+        'click #playAgain': 'playAgain',
+    },
     template: _.template(document.getElementById('end-game-template').textContent),
     render: function() {
         var playaz = this.model.get('name');
@@ -12,5 +14,9 @@ module.exports = Backbone.View.extend({
             totalScore: totalScore,
         });
         this.el.innerHTML = html;
+    },
+    playAgain: function() {
+        Backbone.history.navigate('#/new');
+        window.location.reload();
     },
 });

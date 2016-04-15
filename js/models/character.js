@@ -28,11 +28,11 @@ module.exports = Backbone.Model.extend({
         }
     },
     validate: function(attributes) {
-            if (attributes.y > 10 || attributes.y < 0) {
+            if (attributes.y > 9 || attributes.y < 0) {
                 // nope, can't do it
                 return 'you\'re going too far! turn back!';
             }
-            if (attributes.x > 10 || attributes.x < 0) {
+            if (attributes.x > 9 || attributes.x < 0) {
                 return 'you\'re going too far! turn back!';
             }
     },
@@ -65,8 +65,8 @@ module.exports = Backbone.Model.extend({
         });
     },
     randomEnergy: function () {
-        this.set('xEnergy', Math.round(Math.random() * 10));
-        this.set('yEnergy', Math.round(Math.random() * 10));
+        this.set('xEnergy', Math.floor(Math.random() * 10));
+        this.set('yEnergy', Math.floor(Math.random() * 10));
         if (this.get('energy') <= 80) {
             this.set('energy', this.get('energy') + 20);
         } else if (this.get('energy') <= 90) {

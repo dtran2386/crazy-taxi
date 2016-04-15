@@ -2,6 +2,19 @@
 module.exports = Backbone.View.extend({
     initialize: function() {
         this.model.on('change', this.render, this);
+        var that = this;
+        Mousetrap.bind('right', function() {
+            that.clickRight();
+        });
+        Mousetrap.bind('left', function() {
+            that.clickLeft();
+        });
+        Mousetrap.bind('up', function() {
+            that.clickUp();
+        });
+        Mousetrap.bind('down', function() {
+            that.clickDown();
+        });
     },
     events: {
         'click #click-right': 'clickRight',
@@ -43,18 +56,23 @@ module.exports = Backbone.View.extend({
             totalScore: totalScore,
         });
         var grid = document.getElementById('cell-grid');
-        for (var x = 0; x < 10; x++) {
-          for (var y = 0; y < 10; y++) {
+        for (var y = 0; y < 10; y++) {
+          for (var x = 0; x < 10; x++) {
               var div = document.createElement('div');
+//              div.setAttribute('id', 'cell-' + x + '-' + y);
               div.classList.add('cells');
               
               // is the current cell an energy pod?
               if (x === this.model.get('xEnergy') && y === this.model.get('yEnergy')) {
                 div.classList.add('energy-pod');
               }
+              if (x === this.model.get('x') && y === this.model.get('y')) {
+                div.classList.add('movement');
+              }
               grid.appendChild(div);
           }; // end inner for loop
-        }; // end outer for loop
+        };// end outer for loop
+
     },
     clickRight: function () {
         console.log('clicked right');

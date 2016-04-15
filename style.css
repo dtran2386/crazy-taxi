@@ -101,3 +101,14 @@ input[type="radio"] {
     text-align: center;
     font-size: 45px;
 }
+#playAgain {
+    margin-left: 41%;
+    width: 250px;
+    height: 70px;
+}
+.movement {
+    background-color: darkslateblue;
+}
+.movement:hover {
+    background-color: aliceblue;
+}
