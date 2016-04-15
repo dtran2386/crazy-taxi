@@ -1,15 +1,22 @@
 body {
-    margin: 10%;
+    margin: 1%;
+    margin-left: 2.5%;
+    background-color: black;
 }
 .border {
-    border: 3px solid black;
-    padding-left: 33.5%;
-    border-radius: 5px;
-    height: 670px;
+    border: 10px solid white;
+    padding-left: 4%;
+    border-radius: 10px;
+    height: 755px;
+    width: 1290px;
+    background-color: white;
+}
+#border2 {
+    width: 100px;
 }
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 45px;
+    font-size: 75px;
 }
 h2 {
     font-family: 'PT Sans Narrow', sans-serif;
@@ -30,8 +37,12 @@ button:hover {
     background-color:darkolivegreen;
     color: white;
 }
+#create-player {
+    width: 200px;
+    height: 70px;
+}
 input {
-    height: 40px;
+    height: 38px;
     width: 290px;
     border: 1px solid black;
     border-radius: 4px;
@@ -54,4 +65,36 @@ input[type="radio"] {
     width: 20px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 25px;
+    height: 200px;
+}
+#gamePage {
+    display: inline-block;
+    width: 460px;
+}
+#cell-grid {
+    width: 350px;
+    font-size: 0;
+    margin-left: 50%;
+    display: inline-block;
+    position: absolute;
+}
+#cell-grid div{
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+}
+.cells {
+    background-color: palegreen;
+}
+.energy-pod {
+    background-color: green;
+}
+.energy-pod:hover {
+    background-color: springgreen;
+}
+#results p{
+    text-align: center;
+    font-size: 45px;
 }
